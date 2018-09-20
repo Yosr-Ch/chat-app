@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+main {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+aside {
+  grid-area: aside;
+  margin-right: 0.5rem;
+  background-color: lightcyan;
+}
+
+.container {
+  display: grid;
+  /* grid-gap: 10px; */
+  grid-template-areas:
+    "aside content";
+  grid-template-columns: 1fr 3fr;
+
+  height: 100vh;
+}
+
+.chat-messages {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%;
+}
+.message {
+
+}
+
+.chat-input {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.btn-send {
+  margin: 0 0.5rem;
+}
+
+textarea {
+	box-sizing: border-box;
+	width: 100%;
+  resize: none;
+}
